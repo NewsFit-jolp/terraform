@@ -3,7 +3,7 @@ resource "aws_lb" "newsfit_lb" {
   internal           = false
   load_balancer_type = "application"
   security_groups    = [aws_security_group.newsfit_sg.id]
-  subnets            = [aws_subnet.newsfit_vpc_public_subnet_1.id, aws_subnet.newsfit_vpc_private_subnet_1.id]
+  subnets            = [aws_subnet.newsfit_vpc_public_subnet_1.id, aws_subnet.newsfit_vpc_public_subnet_2.id]
 
   tags = {
     Name = "newsfit_alb"
